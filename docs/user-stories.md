@@ -8,7 +8,7 @@
 - [ ] Given I am a developer, when I read the technical documentation, then I can understand the system's implementation and architecture.
 
 ## As a site owner
-- [ ] Given I am a site owner, when I track analytics, then I can measure which hero variant is being served to users.
+- [x] Given I am a site owner, when I track analytics, then I can measure which hero variant is being served to users.
 
 ## As a content editor
 - [x] Given I am a content editor, when I configure probability weights in Sanity, then I can control how frequently each hero variant is displayed.
