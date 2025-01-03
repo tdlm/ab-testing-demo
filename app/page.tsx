@@ -3,6 +3,8 @@ import { TrackVariantView } from "@/components/TrackVariantView";
 
 import { getHeroTextVariant } from "@/sanity/lib/helpers/getHeroTextVariant";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const { heroTitle = 'Fallback Title', heroSubtitle = 'Fallback Subtitle', _id = '' } = await getHeroTextVariant();
 
