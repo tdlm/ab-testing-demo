@@ -7,10 +7,10 @@ type TrackVariantViewProps = {
     variantId?: string;
 };
 
-export const TrackVariantView = ({
+export const TrackVariantView: React.FC<TrackVariantViewProps> = ({
     children,
     variantId = '',
-}: TrackVariantViewProps) => {
+}) => {
     useEffect(() => {
         if (!variantId) {
             return;
