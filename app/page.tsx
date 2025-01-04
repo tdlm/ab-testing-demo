@@ -7,8 +7,8 @@ export const dynamic = 'force-dynamic';
 
 export default async function Home() {
     const {
-        heroTitle = 'Fallback Title',
-        heroSubtitle = 'Fallback Subtitle',
+        heroTitle = 'Welcome to Redis A/B Testing',
+        heroSubtitle = 'We hope you enjoy your time here!',
         _id = '',
     } = await getHeroTextVariant();
 

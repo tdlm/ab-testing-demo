@@ -16,7 +16,7 @@ export const getHeroTextVariant = async () => {
     );
 
     // Generate a random number between 0 and our total weight.
-    const random = Math.random() * totalWeight;
+    const random = Math.random() * Math.max(totalWeight, 100); // NOTE: We need to make sure we go at least to 100.
 
     // Find our variant based on weight distribution by checking if our random number is less than or equal to our weight sum.
     let weightSum = 0;
@@ -31,6 +31,8 @@ export const getHeroTextVariant = async () => {
         return {};
     }
 
+    // Once we have our selected variant, we need to fetch the actual variant data. This avoids selecting everything
+    // all at once.
     const heroTextVariant = await client.fetch(HERO_TEXT_VARIANT_BY_ID_QUERY, {
         variantId: selectedHeroTextVariant.variantId,
     });
