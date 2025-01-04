@@ -52,24 +52,13 @@ export default {
             name: 'events',
             title: 'Events',
             type: 'object',
-            description: 'Additional metadata for this variant',
+            description: 'Event data for this variant',
             fields: [
                 {
                     name: 'views',
                     initialValue: 0,
                     type: 'number',
                     title: 'Views',
-                    readOnly: ({
-                        currentUser,
-                    }: {
-                        currentUser: { roles: { name: string }[] };
-                    }) => {
-                        return currentUser?.roles.some(
-                            (role) => role.name === 'developer'
-                        )
-                            ? false
-                            : true;
-                    },
                 },
             ],
         },
